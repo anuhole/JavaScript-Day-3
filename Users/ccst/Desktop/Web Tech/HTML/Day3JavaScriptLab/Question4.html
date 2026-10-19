@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+
+    <ul>
+        <li>John</li>
+        <li class="list">karl</li>
+        <li>Bradon</li>
+    </ul><hr>
+    <ul>
+        <li>Sam</li>
+    </ul>
+    <hr>
+    <ul>
+        <li>Glen</li>
+        <li class="list">Ten</li>
+
+    </ul>
+    <script>
+        var element = document.getElementsByClassName("list")
+        for(var i=0;i<element.length;i++){
+        var span =document.createElement("span")
+        span.textContent= "-2nd!"
+        span.style.color="blue"
+
+        element[i].appendChild(span)
+        }
+    </script>
+    
+</body>
+</html>

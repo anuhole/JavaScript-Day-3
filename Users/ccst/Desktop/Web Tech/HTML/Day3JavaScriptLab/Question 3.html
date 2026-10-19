@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <h2>Members of my Group are</h2>
+    <ol id="list">
+
+    </ol>
+    <input type="button" onclick="f1() " value="popupate List">
+
+    <script>
+
+        function f1() {
+            var ol = document.getElementById("list")
+            names = ['kavita', 'anita', 'Sunita', 'babita']
+
+            for (var i = 0; i < names.length; i++) {
+                var list = document.createElement("li")
+                list.textContent = names[i]
+                ol.appendChild(list);
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

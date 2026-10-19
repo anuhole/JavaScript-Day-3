@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <script>
+        //Question 1
+        function transformObject(numArray){
+           
+           return numArray.map(num => ({val:num}))
+
+        }
+        const numbers =[1,2,3]
+        var result=transformObject(numbers)
+        console.log(result)
+
+        //Question 2
+        prodects =[
+            {pid:101, productName:"Gaming Headset", price: 3000, categrery:"Gaming"},
+            {pid:102, productName:"Mechanical Keyboard", price: 5000, categrery:"Accesseries"},
+            {pid:103, productName:"Mouse", price: 300, categrery:"toy"},
+            {pid:104, productName:"game", price: 4500, categrery:"toy"}
+
+
+             
+        ]
+         var str ="<table border ='1' copp >"
+           
+           
+               for (let prod of prodects) {
+                    str += `<tr><td>${prod.pid}</td><td>${prod.productName}</td><td>${prod.price}</td><td>${prod.categrery}</td></tr>`;
+                }
+               
+    
+            str += "</table> <br>";
+            document.write(str)
+
+
+          //  Question 3
+              var newArr= []
+            for (let prod of prodects){
+                if(prodects.filter(cat => cat.categrery=='toy'))
+                    newArr.push(prod)
+            }
+             console.log(newArr)
+
+             //Question 4
+             const salesEmployees = [
+        {
+             empno : 7499,
+             ename : "ALLEN",
+            job : "SALESMAN",
+            mgr : 7698,
+            hiredate: "1981-02-20T00:00:00.000Z",
+            sal: 1600,
+            comm: 300,
+            deptno: 30
+        },
+        {
+            empno: 7521,
+            ename: "WARD",
+            job: "SALESMAN",
+            mgr: 7698,
+            hiredate: "1981-02-22T00:00:00.000Z",
+            sal: 1250,
+            comm: 500,
+            deptno: 30
+        },
+        {
+            empno: 7654,
+            ename: "MARTIN",
+            job: "SALESMAN",
+            mgr: 7698,
+            hiredate: "1981-09-08T00:00:00.000Z",
+            sal: 1250,
+            comm: 1400,
+            deptno: 30
+        }
+    ];
+
+     var str ="<table border ='1' copp >"
+           
+           var totalComm=0
+          str += "<tr><th>Emp No</th><th>Name</th><th>Job</th><th>Manager</th><th>Hire Date</th><th>Salary (After 5% Inc)</th><th>Commission</th><th>Dept No</th></tr>";
+               for (let emp of salesEmployees) {
+                    let updatesalary = emp.sal *1.05;
+                   
+                    totalComm += emp.comm;
+
+                    str += `<tr><td>${emp.empno}</td><td>${emp.ename}</td><td>${emp.job}</td><td>${emp.mgr}</td><td>${emp.hiredate}</td><td>${updatesalary}</td><td>${emp.comm}</td><td>${emp.deptno}</td></tr>`;
+                }
+
+               
+                str += `<tr><td>Total Commission</td><td>${totalComm}</td></tr>`
+    
+            str += "</table>";
+            document.write(str)
+        
+    
+    </script>
+    
+</body>
+</html>
